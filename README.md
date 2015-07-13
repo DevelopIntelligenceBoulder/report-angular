@@ -1,7 +1,10 @@
 # report-angular
 An example of how to write a simple reporting tool in Angular.
 
-##Instructions
+## Lost?
+Start with a look at an [Angular Hello World](https://github.com/DevelopIntelligenceBoulder/hello-angular-1). 
+
+## Instructions
 1. Install [NodeJS](https://nodejs.org/)
 2. Run `npm start` to get the application running on the web server
     * Packages needed for this application will be installed (i.e. Angular, Angular Mocks and Express)
