@@ -1,0 +1,18 @@
+<section ng-click="showSelected()">
+	<header>
+		{{report.date | showDate}}
+	</header>
+	<p>
+		Quantity: {{report.quantity}}<br/>
+		Net Profit:{{report.netSale | currency}}<br/>
+		Cost of Goods: {{report.costOfGoods | currency}}<br/>
+	</p>
+	<footer>
+		<span
+			ng-if="report.profitable"
+			ng-class="report.goodImage"
+			class="fa"></span>
+
+		{{report.grossProfit | currency}}
+	</footer>
+</section>			
