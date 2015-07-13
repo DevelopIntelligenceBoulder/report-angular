@@ -12,7 +12,7 @@
 	<body ng-app="reports"
 		ng-controller="AppController as ac" 
 		class="give-page">
-		<header ng-controller="HeaderController as hc">
+		<header class="title" ng-controller="HeaderController as hc">
 			<h1>Reporting <span class="sub-title">Ohh yeah it can be fun!</span></h1>
 			<time datetime="{{hc.date.current | date:'yyyy-MM-d'}}"
 				  ng-bind="hc.date.current | date:'longDate'">January 1, 1970</time>
@@ -23,13 +23,13 @@
 		  	<p>
 		  		There are {{ac.sales.length}} months of retrievable data.
 		  	</p>
-		  	<h3 class="report-form-control">
-				Want to add another report?
+		  	<header class="report-form-control">
+				<h3>Want to add another report?</h3>
 				<div class="control-button-wrapper">
 					<button class="primary-button" ng-click="ac.expandHandler()">Add One</button>
 					<button ng-click="ac.collapseHandler()">Hide</button>
 				</div>
-			</h3>
+			</header>
 		  	<div ng-if="ac.expand">
 			  	<form name="giveForm"
 			  		ng-controller="ReportFormController as rfc" 
@@ -38,8 +38,9 @@
 					novalidate>
 					<fieldset><legend>Additional Report</legend>
 						<label for="reportDate">Report Date:</label>
-						<input type="text" name="reportDate" 							id="reportDate"
-							placeholder="Report Date (i.e. 2015-06-01)"
+						<input type="text" name="reportDate"
+						    id="reportDate"
+							placeholder="Report Date (i.e. 10-01-2015)"
 							ng-model="rfc.reportToAdd.date" />
 						<label for="quantity">Quantity:</label>
 						<input type="text" name="quantity"
