@@ -1,0 +1,58 @@
+@import "variable.less";
+@import "font.less";
+
+/* Header rules */
+header {
+    .embeddedFont;
+    background-color: @brand-primary;
+    border-bottom: 1px solid @brand-primary;
+    color: @light-text;
+    margin-top: 0;
+
+    h1 {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .sub-title {
+        color: @gray-text;
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    time {
+        background-color: @darken;
+        border-radius: 0.4rem;
+        border: 1px solid white;
+        display: block;
+        font-size: @font-small;
+        margin: 0 0 1rem 1rem;
+        padding: 0.2rem 1rem;
+        text-align: center;
+        width: 10rem;
+    }
+
+}
+
+@media screen and (min-width: 37rem) {
+    header {
+
+        .sub-title {
+            display: inline;
+            font-size: 1.75rem;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 53rem) {
+
+    header time {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: @font-normal;
+    }
+
+}

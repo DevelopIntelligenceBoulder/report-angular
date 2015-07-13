@@ -1,0 +1,13 @@
+.report-filter input[type="number"] {
+  text-align: center;
+  width: 5rem;
+}
+@media only screen and (min-width: 41em) {
+  .report-filter .control-button-wrapper {
+    display: inline;
+    margin-left: 1rem;
+  }
+  .report-filter button {
+    width: 7rem;
+  }
+}
