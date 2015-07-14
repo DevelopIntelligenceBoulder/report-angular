@@ -1,10 +1,10 @@
 angular.module('reports')
-  .controller('ReportFormController', ReportFormController);
+  .controller('ReportFormController', ['$scope', ReportFormController]);
 
 /** 
  * Controller for the report form.
  **/
-function ReportFormController() {
+function ReportFormController($scope) {
     'use strict';
 
     //Saving the this reference
@@ -17,7 +17,8 @@ function ReportFormController() {
      * Handles the submission of the form.
      **/
     rfc.submitHandler = function submitHandler() {
-        rfc.sales.push(rfc.reportToAdd);
+        $scope.ac.sales.push(rfc.reportToAdd);
+        console.log(rfc.reportToAdd);
     };
 
     /**
