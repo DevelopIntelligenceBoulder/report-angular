@@ -5,11 +5,16 @@ function sales(salesAPI) {
 	'use strict';
 
 	//Stores the sales records for the application
-	var salesRecords = {};
+	var salesRecords = [];
 
 	//Getter for the sales records
 	var getSalesRecords = function getSalesRecords() {
 		return salesRecords;
+	};
+
+	//Add a record to array of sales
+	var addSalesRecord = function addSalesRecord(record) {
+		salesRecords.push(record);
 	};
 
 	//Initialize this sales service
@@ -24,7 +29,8 @@ function sales(salesAPI) {
 	//API
 	return {
 		initialize: initialize,
-		getSalesRecords: getSalesRecords
+		getSalesRecords: getSalesRecords,
+		addSalesRecord: addSalesRecord
 	};
 
 }
