@@ -11,23 +11,16 @@ function AppController(sales) {
     var ac = this;
 
     //Report filtering
-    ac.salesViewLimit = 10;
-    ac.expand = true;
+    ac.salesViewLimit = 4;
+    //Is the form to be expanded
+    ac.isExpanded = true;
 
     /**
-     * Handle the expansion of the report form element.
+     * Handle the expand/collapse of the report form element.
      **/
-    ac.expandHandler = function expandHandler() {
-        ac.expand = true;
+    ac.toggleFormControl = function toggleFormControl() {
+        ac.isExpanded = !ac.isExpanded;
     };
-
-    /**
-     * Handle the collapse of the report form element.
-     **/
-    ac.collapseHandler = function collapseHandler() {
-        ac.expand = false;
-    };
-
 
     //Get all of the sales information
     sales.initialize()
