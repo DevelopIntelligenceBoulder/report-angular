@@ -13,7 +13,7 @@ function AppController(sales) {
     //Report filtering
     ac.salesViewLimit = 4;
     //Is the form to be expanded
-    ac.isExpanded = true;
+    ac.isExpanded = false;
 
     /**
      * Handle the expand/collapse of the report form element.
